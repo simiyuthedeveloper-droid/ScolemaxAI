@@ -1,0 +1,16 @@
+# 1. Extract zip file
+unzip smv-security-v1.zip
+
+# 2. Navigate to directory
+cd smv-security
+
+# 3. Run installer
+php install.php
+
+# 4. Follow prompts for:
+#    - MySQL host/user/password
+#    - Control Center URL
+
+# 5. Add cron job for threat detection
+crontab -e
+# Add: */5 * * * * php /path/to/daemon.php
